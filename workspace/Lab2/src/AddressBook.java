@@ -20,5 +20,9 @@ public class AddressBook {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println("Hello World!");
+		AddressBook address = new AddressBook();
+		
+		address.addBuddy("Bob", 613, "57 Cecil Carling");
+		address.removeBuddy("Bob");
 	}
 }
