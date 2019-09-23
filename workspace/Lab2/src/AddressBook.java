@@ -8,9 +8,8 @@ public class AddressBook {
 		buddyList = new HashMap<String, BuddyInfo>();
 	}
 	
-	public void addBuddy(String name, int phone_number, String address){
-		BuddyInfo buddy = new BuddyInfo(name, phone_number, address);
-		buddyList.put(name, buddy);
+	public void addBuddy(BuddyInfo buddy){
+		buddyList.put(buddy.getName(), buddy);
 	}
 	
 	public void removeBuddy(String name){
@@ -21,8 +20,8 @@ public class AddressBook {
 		// TODO Auto-generated method stub
 		System.out.println("Hello World!");
 		AddressBook address = new AddressBook();
-		
-		address.addBuddy("Bob", 613, "57 Cecil Carling");
+		BuddyInfo buddy = new BuddyInfo("Bob", 613, "57 Cecil Carling");
+		address.addBuddy(buddy);
 		address.removeBuddy("Bob");
 	}
 }
